@@ -1,0 +1,185 @@
+// Typography
+// -------------------------
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+
+@text-color: #474747;
+
+@font-family-sans-serif:  'PT Sans', Helvetica, Arial, sans-serif;
+@font-family-base:        @font-family-sans-serif;
+
+// Brand color
+//-----------------
+@brand-primary: #fc0;
+
+// Link color
+//-----------------
+@link-color:            @text-color;
+@link-hover-color:      @text-color;
+
+// Typography
+//-----------------
+@font-size-h1: 32px;
+@font-size-h2: 26px;
+
+// Forms
+//-----------------
+@input-border-radius: 0;
+@input-border-focus: @brand-primary;
+@input-color-placeholder: rgba(71, 71, 71, 0.501961);
+
+// Slider
+//-----------------
+.slider	{
+	.tp-rightarrow.default{
+		background: url(/images/svg/slider-right-default.svg);
+	}
+	.tp-leftarrow.default{
+		background: url(/images/svg/slider-left-default.svg);
+	}
+}
+// Label
+//-------
+body label{
+	font-weight: normal;
+}
+
+
+// Button
+//----------------
+@btn-default-border: @brand-primary;
+@btn-default-color: @text-color;
+@border-radius-base: 0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+
+.button-default{
+	color: @btn-default-color;
+	border-radius: @border-radius-base;
+	border: 1px solid @btn-default-border;
+	padding: 6px 12px;
+	text-decoration: none;
+	background: #fff;
+	box-shadow: none;
+	font-weight: normal;
+	transition: all 0.3s;
+	&:hover,
+	&:focus{
+		color: @btn-default-color;
+		text-decoration: none;
+		box-shadow: none;
+		background-color: @brand-primary;
+		transition: all 0.3s;
+		border-collor: @brand-primary;  
+	}
+}
+
+// Add to cart
+//--------------
+.addtocart-bar span.addtocart-button input.addtocart-button{
+	border: 1px solid @brand-primary;
+	color: @btn-default-color;
+	border-radius: 0;
+	background: #fff;
+	padding: 5px 10px 5px 30px;
+	font-size: 16px;
+	text-transform: uppercase;
+	transition: all 0.3s;
+    letter-spacing: normal;
+    line-height: 22px;
+	&:hover{
+		background: @brand-primary;
+		color: @btn-default-color;
+		transition: all 0.3s;
+	}
+}
+.addtocart-bar span.addtocart-button{
+	margin-left: 10px;
+	position: relative;
+	&:before{
+		content: "\f07a";
+		display: inline-block;
+		font: normal normal normal 16px/1 FontAwesome;
+		color: @text-color;
+		position: absolute;
+		top: 9px;
+		left: 10px;
+	}
+}
+.addtocart-bar input.quantity-input{
+	border-radius: 0;
+	background: #fff;
+	border-color: #eee;
+	color: @text-color;
+	font-weight: normal;
+	box-shadow: none;
+	height: 34px !important;
+	width: 34px !important;
+}
+.addtocart-bar span.quantity-controls{
+	height: 34px;
+}
+.addtocart-bar span.quantity-controls input.quantity-controls{
+	height: 17px;
+	width: 17px;
+	margin: 0;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.addtocart-bar span.quantity-controls input.quantity-plus{
+	background-image: url(/images/svg/cart-plus.svg);
+}
+.addtocart-bar span.quantity-controls input.quantity-minus{
+	background-image: url(/images/svg/cart-minus.svg);
+}
+
+// 
+// Задавать вопрос по этому товару
+.t3-content{
+	a.ask-a-question{
+		background: #fff;
+		border-radius: 0;
+		color: @text-color;
+		border-color: #eee;
+		font-size: 14px;
+		font-weight: normal;
+		padding: 3px 10px;
+		&:hover{
+			background: #fff;
+			color: @text-color;
+			text-decoration: underline;
+		}
+	}
+}
+
+// Badge
+//----------
+.product_badge > div{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 2px 9px;
+	margin-top: 10px;
+}
+.category-view .product_badge > div{
+	margin-right: 1px;
+}
+.product_badge > div:nth-child(2){
+	margin-top: 36px;
+}
+.product_badge > div:nth-child(3){
+	margin-top: 62px;
+}
+.bit_badge_discount{
+	background: #abd07e;
+}
+.bit_badge_sale{
+	background: #ff7878;
+}
+.bit_badge_new{
+	background: #46aad7;
+}
+
+// Высота блока с картинкой на странице категорий
+//------------------------------------------
+@height-img-cat: 250px;
